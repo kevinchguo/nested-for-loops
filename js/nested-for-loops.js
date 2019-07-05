@@ -10,10 +10,11 @@ function nestedForLoops (depth, width = depth) {
   // Write code here
   
   empStr += result
-  for (let x = 0; x < depth; x++) {
-    for (let y = 0; y < width; y++) {
-      empStr += "{x:" + y + ", y:" + x + "}"
-      if (y < width - 1) {
+  //just like an x-y graph x-axis is the first for loop, y-axis is the second for loop
+  for (let rows = 0; rows < depth; rows++) { //first for loop creates the rows
+    for (let columns = 0; columns < width; columns++) { //second for loop makes the columns
+      empStr += "{x:" + columns + ", y:" + rows + "}"
+      if (columns < width - 1) {
         empStr += ", "
       }
     }
