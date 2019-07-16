@@ -1,7 +1,7 @@
 const expect = chai.expect;
 
-describe('equal width and depth', function () {
-  it('should return 3 x 3 string grid', function () {
+describe("equal width and depth", function() {
+  it("should return 3 x 3 string grid", function() {
     const result = nestedForLoops(3);
     expect(result).to.deep.equal(`
 {x:0, y:0}, {x:1, y:0}, {x:2, y:0}
@@ -11,8 +11,8 @@ describe('equal width and depth', function () {
   });
 });
 
-describe('greater depth than width', function () {
-  it('should return 10 x 5 string grid', function () {
+describe("greater depth than width", function() {
+  it("should return 10 x 5 string grid", function() {
     const result = nestedForLoops(10, 5);
     expect(result).to.deep.equal(`
 {x:0, y:0}, {x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}
@@ -29,8 +29,8 @@ describe('greater depth than width', function () {
   });
 });
 
-describe('greater width than depth', function () {
-  it('should return 5 x 10 string grid', function () {
+describe("greater width than depth", function() {
+  it("should return 5 x 10 string grid", function() {
     const result = nestedForLoops(5, 10);
     expect(result).to.deep.equal(`
 {x:0, y:0}, {x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}, {x:5, y:0}, {x:6, y:0}, {x:7, y:0}, {x:8, y:0}, {x:9, y:0}
@@ -42,14 +42,14 @@ describe('greater width than depth', function () {
   });
 });
 
-describe('error handling', function () {
-  it('should return "" empty string if no param is passed', function () {
+describe("error handling", function() {
+  it('should return "" empty string if no param is passed', function() {
     const result = nestedForLoops();
-    expect(result).to.have.string('');
+    expect(result).to.have.string("");
   });
 
-  it('should return "" empty string if the param is not a number', function () {
-    const result = nestedForLoops('A');
-    expect(result).to.have.string('');
+  it('should return "" empty string if the param is not a number', function() {
+    const result = nestedForLoops("A");
+    expect(result).to.have.string("");
   });
 });
